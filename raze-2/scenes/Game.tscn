@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://x0wtdu1n6r3m"]
+
+[ext_resource type="PackedScene" uid="uid://duk22xofkp7kx" path="res://scenes/player.tscn" id="1_ibkli"]
+[ext_resource type="PackedScene" uid="uid://cwf2d47nc11my" path="res://scenes/game_controller.tscn" id="1_s0nni"]
+[ext_resource type="Texture2D" uid="uid://da7dx4wn6pfox" path="res://assets/White Cube.png" id="2_qbsmt"]
+[ext_resource type="PackedScene" uid="uid://b4fvt821287ub" path="res://scenes/gun.tscn" id="3_cpr0p"]
+[ext_resource type="PackedScene" uid="uid://cdnmidfs13vm4" path="res://scenes/enemy.tscn" id="4_78awf"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nup64"]
+
+[node name="Game" type="Node2D" unique_id=1309676207]
+
+[node name="Player" parent="." unique_id=1809207567 instance=ExtResource("1_ibkli")]
+position = Vector2(-2, -64)
+
+[node name="Gun" parent="Player" unique_id=762129782 instance=ExtResource("3_cpr0p")]
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=733318121]
+position = Vector2(2, -54)
+
+[node name="GameController" parent="Player/Camera2D" unique_id=225001667 node_paths=PackedStringArray("player") instance=ExtResource("1_s0nni")]
+offset_left = 1.0
+offset_top = 50.0
+offset_right = 153.0
+offset_bottom = 156.0
+player = NodePath("../..")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1368401195]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1464938080]
+shape = SubResource("WorldBoundaryShape2D_nup64")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=719614741]
+position = Vector2(-1, 3)
+scale = Vector2(8.171875, 0.046875)
+texture = ExtResource("2_qbsmt")
+
+[node name="Enemy" parent="." unique_id=459374461 node_paths=PackedStringArray("game_controller") instance=ExtResource("4_78awf")]
+position = Vector2(208, -55)
+game_controller = NodePath("../Player/Camera2D/GameController")

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cwf2d47nc11my"]
+
+[ext_resource type="Script" uid="uid://dpf53apkhxv86" path="res://scripts/game_controller.gd" id="1_vq0e2"]
+
+[node name="GameController" type="Control" unique_id=225001667]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vq0e2")
+
+[node name="Win-Screen" type="Control" parent="." unique_id=1870234598]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Win-Screen" unique_id=1396188776]
+layout_mode = 0
+offset_left = -50.0
+offset_top = 25.0
+offset_right = 51.0
+offset_bottom = 56.0
+text = "Reset Game"
+
+[node name="Label" type="Label" parent="Win-Screen" unique_id=1170636049]
+layout_mode = 0
+offset_left = -62.0
+offset_top = -37.0
+offset_right = 62.0
+offset_bottom = -14.0
+text = "Ya Heckin Won!!"
+
+[connection signal="pressed" from="Win-Screen/Button" to="." method="_on_button_pressed"]
