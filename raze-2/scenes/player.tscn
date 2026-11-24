@@ -12,6 +12,11 @@ collision_layer = 2
 collision_mask = 5
 floor_snap_length = 10.0
 script = ExtResource("1_g2els")
+SPEED = null
+JUMP_VELOCITY = null
+DOUBLE_JUMP_VELOCITY = null
+is_game_paused = null
+is_double_jump_used = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=590305983]
 position = Vector2(-8, 4)

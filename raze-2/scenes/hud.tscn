@@ -7,6 +7,7 @@
 [ext_resource type="StyleBox" uid="uid://d3t3r7cyimab3" path="res://assets/StyleBoxes/HUD/hud-hotbar-gunplaceholder.tres" id="4_50alv"]
 [ext_resource type="StyleBox" uid="uid://bmfdji33lbw0a" path="res://assets/StyleBoxes/HUD/hud-hotbar-ammo-bg.tres" id="5_nh46x"]
 [ext_resource type="StyleBox" uid="uid://bbeyi4mxpsw32" path="res://assets/StyleBoxes/HUD/hud-hotbar-bullets.tres" id="6_5t668"]
+[ext_resource type="Texture2D" uid="uid://daubwlbjff8g5" path="res://assets/Gun1.png" id="8_hd3ao"]
 
 [node name="HUD" type="Control" unique_id=554889363]
 layout_mode = 3
@@ -186,13 +187,22 @@ offset_right = 1002.0
 offset_bottom = 38.0
 theme = ExtResource("3_xxteq")
 
-[node name="pnl0" type="Panel" parent="barHot/Slots" unique_id=829055920]
+[node name="pnl1" type="Panel" parent="barHot/Slots" unique_id=829055920]
 layout_mode = 0
 offset_left = -130.0
 offset_top = -4.0
 offset_right = -54.0
 offset_bottom = 43.0
 theme = ExtResource("3_xxteq")
+
+[node name="TextureRect" type="TextureRect" parent="barHot/Slots/pnl1" unique_id=366831321]
+layout_mode = 0
+offset_top = 20.739868
+offset_right = 66.77273
+offset_bottom = 59.73987
+rotation = -0.39573354
+texture = ExtResource("8_hd3ao")
+expand_mode = 1
 
 [node name="pnl2" type="Panel" parent="barHot/Slots" unique_id=988015926]
 layout_mode = 0
@@ -202,6 +212,15 @@ offset_right = 29.0
 offset_bottom = 43.0
 theme = ExtResource("3_xxteq")
 
+[node name="TextureRect" type="TextureRect" parent="barHot/Slots/pnl2" unique_id=1301417376]
+layout_mode = 0
+offset_top = 20.739868
+offset_right = 66.77273
+offset_bottom = 59.73987
+rotation = -0.39573354
+texture = ExtResource("8_hd3ao")
+expand_mode = 1
+
 [node name="pnl3" type="Panel" parent="barHot/Slots" unique_id=812375473]
 layout_mode = 0
 offset_left = 36.0
@@ -209,6 +228,15 @@ offset_top = -4.0
 offset_right = 112.0
 offset_bottom = 43.0
 theme = ExtResource("3_xxteq")
+
+[node name="TextureRect" type="TextureRect" parent="barHot/Slots/pnl3" unique_id=382313079]
+layout_mode = 0
+offset_top = 20.739868
+offset_right = 66.77273
+offset_bottom = 59.73987
+rotation = -0.39573354
+texture = ExtResource("8_hd3ao")
+expand_mode = 1
 
 [node name="pnl4" type="Panel" parent="barHot/Slots" unique_id=312034755]
 layout_mode = 0
@@ -218,6 +246,15 @@ offset_right = 195.0
 offset_bottom = 43.0
 theme = ExtResource("3_xxteq")
 
+[node name="TextureRect" type="TextureRect" parent="barHot/Slots/pnl4" unique_id=209913918]
+layout_mode = 0
+offset_top = 20.739868
+offset_right = 66.77273
+offset_bottom = 59.73987
+rotation = -0.39573354
+texture = ExtResource("8_hd3ao")
+expand_mode = 1
+
 [node name="pnl5" type="Panel" parent="barHot/Slots" unique_id=316716034]
 layout_mode = 0
 offset_left = 202.0
@@ -225,6 +262,15 @@ offset_top = -4.0
 offset_right = 278.0
 offset_bottom = 43.0
 theme = ExtResource("3_xxteq")
+
+[node name="TextureRect" type="TextureRect" parent="barHot/Slots/pnl5" unique_id=201418732]
+layout_mode = 0
+offset_top = 20.739868
+offset_right = 66.77273
+offset_bottom = 59.73987
+rotation = -0.39573354
+texture = ExtResource("8_hd3ao")
+expand_mode = 1
 
 [node name="pnl6" type="Panel" parent="barHot/Slots" unique_id=803814245]
 layout_mode = 0
@@ -234,6 +280,15 @@ offset_right = 361.0
 offset_bottom = 43.0
 theme = ExtResource("3_xxteq")
 
+[node name="TextureRect" type="TextureRect" parent="barHot/Slots/pnl6" unique_id=136262309]
+layout_mode = 0
+offset_top = 20.739868
+offset_right = 66.77273
+offset_bottom = 59.73987
+rotation = -0.39573354
+texture = ExtResource("8_hd3ao")
+expand_mode = 1
+
 [node name="pnl7" type="Panel" parent="barHot/Slots" unique_id=548635069]
 layout_mode = 0
 offset_left = 368.0
@@ -241,3 +296,12 @@ offset_top = -4.0
 offset_right = 444.0
 offset_bottom = 43.0
 theme = ExtResource("3_xxteq")
+
+[node name="TextureRect" type="TextureRect" parent="barHot/Slots/pnl7" unique_id=249827076]
+layout_mode = 0
+offset_top = 20.739868
+offset_right = 66.77273
+offset_bottom = 59.73987
+rotation = -0.39573354
+texture = ExtResource("8_hd3ao")
+expand_mode = 1

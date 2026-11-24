@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://b4fvt821287ub"]
 
-[ext_resource type="Script" uid="uid://1rt2dwtygdyf" path="res://scripts/gun.gd" id="1_og67c"]
 [ext_resource type="Texture2D" uid="uid://daubwlbjff8g5" path="res://assets/Gun1.png" id="2_og67c"]
 
 [node name="Gun" type="Node2D" unique_id=762129782]
-script = ExtResource("1_og67c")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=53099242]
 position = Vector2(41, 0)

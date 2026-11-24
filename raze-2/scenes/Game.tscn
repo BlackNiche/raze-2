@@ -56,6 +56,11 @@ polygon = PackedVector2Array(-269, 619, -269, 651, -123, 595, -46, 599, 355, 524
 
 [node name="Player" parent="." unique_id=1809207567 instance=ExtResource("1_ibkli")]
 position = Vector2(-683, -783)
+SPEED = 600.0
+JUMP_VELOCITY = -850.0
+DOUBLE_JUMP_VELOCITY = -700.0
+is_game_paused = false
+is_double_jump_used = false
 
 [node name="Gun" parent="Player" unique_id=762129782 instance=ExtResource("3_cpr0p")]
 position = Vector2(-8.071749, -19.730942)

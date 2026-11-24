@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://erqyhivsdnt4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nup64"]
+
+[node name="Pickup" type="StaticBody2D" unique_id=236786818]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=382044579]
+shape = SubResource("RectangleShape2D_nup64")
