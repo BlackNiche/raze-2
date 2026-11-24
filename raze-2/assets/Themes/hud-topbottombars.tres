@@ -1,0 +1,15 @@
+[gd_resource type="Theme" format=3 uid="uid://b7nm2cnrvvgrf"]
+
+[ext_resource type="StyleBox" uid="uid://dwpjvxpyy8gg0" path="res://assets/StyleBoxes/HUD/hub-topbar-button.tres" id="1_too07"]
+[ext_resource type="StyleBox" uid="uid://cdk5poccnud0b" path="res://assets/StyleBoxes/HUD/HUD-Top-Bar.tres" id="2_bwki2"]
+[ext_resource type="StyleBox" uid="uid://cy0c43vm1w1vb" path="res://assets/StyleBoxes/HUD/HUD-Pbar-Background (2).tres" id="3_too07"]
+[ext_resource type="StyleBox" uid="uid://boma6m0biw8b7" path="res://assets/StyleBoxes/HUD/HUD-PBar-Fill.tres" id="4_7efbb"]
+
+[resource]
+Button/font_sizes/font_size = 10
+Button/styles/hover = ExtResource("1_too07")
+Button/styles/normal = ExtResource("1_too07")
+Label/font_sizes/font_size = 11
+Panel/styles/panel = ExtResource("2_bwki2")
+ProgressBar/styles/background = ExtResource("3_too07")
+ProgressBar/styles/fill = ExtResource("4_7efbb")

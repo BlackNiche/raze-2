@@ -1,0 +1,243 @@
+[gd_scene format=3 uid="uid://hlrfxqgpkayb"]
+
+[ext_resource type="Theme" uid="uid://b7nm2cnrvvgrf" path="res://assets/Themes/hud-topbottombars.tres" id="1_kr41b"]
+[ext_resource type="Theme" uid="uid://cx5i2ei0j5vx4" path="res://assets/Themes/hud-hotbar.tres" id="2_b3qhj"]
+[ext_resource type="LabelSettings" uid="uid://ch7s6ugsw4166" path="res://assets/StyleBoxes/HUD/bar_labels.tres" id="2_imjlj"]
+[ext_resource type="Theme" uid="uid://cogs4pj36nd2e" path="res://assets/Themes/hud-hotbar-slot.tres" id="3_xxteq"]
+[ext_resource type="StyleBox" uid="uid://d3t3r7cyimab3" path="res://assets/StyleBoxes/HUD/hud-hotbar-gunplaceholder.tres" id="4_50alv"]
+[ext_resource type="StyleBox" uid="uid://bmfdji33lbw0a" path="res://assets/StyleBoxes/HUD/hud-hotbar-ammo-bg.tres" id="5_nh46x"]
+[ext_resource type="StyleBox" uid="uid://bbeyi4mxpsw32" path="res://assets/StyleBoxes/HUD/hud-hotbar-bullets.tres" id="6_5t668"]
+
+[node name="HUD" type="Control" unique_id=554889363]
+layout_mode = 3
+anchor_right = 1.003
+anchor_bottom = 1.0
+offset_right = -0.072021484
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="barBottom2" type="Panel" parent="." unique_id=968833173]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 768.0
+offset_right = 2046.8625
+offset_bottom = 791.8949
+rotation = 3.1415927
+theme = ExtResource("1_kr41b")
+
+[node name="Elements" type="Control" parent="barBottom2" unique_id=1273840535]
+anchors_preset = 0
+offset_left = 1017.58984
+offset_top = 21.999893
+offset_right = 1025.3842
+offset_bottom = 30.938065
+rotation = 3.1415927
+
+[node name="lblEarned" type="Label" parent="barBottom2/Elements" unique_id=779679702]
+layout_mode = 0
+offset_left = -1.4101554
+offset_top = 5.0000005
+offset_right = 41.04457
+offset_bottom = 21.0
+text = "Earned"
+
+[node name="lblCr" type="Label" parent="barBottom2/Elements" unique_id=1828765734]
+layout_mode = 0
+offset_left = 88.58984
+offset_top = 4.9999843
+offset_right = 112.84762
+offset_bottom = 20.999985
+text = "0 cr"
+
+[node name="pbCr" type="ProgressBar" parent="barBottom2/Elements" unique_id=2122096074]
+layout_mode = 0
+offset_left = 131.95837
+offset_top = 3.7807388
+offset_right = 445.95837
+offset_bottom = 19.49174
+value = 80.87
+show_percentage = false
+
+[node name="lblCredits" type="Label" parent="barBottom2/Elements" unique_id=1945898686]
+layout_mode = 0
+offset_left = 453.58984
+offset_top = 4.999921
+offset_right = 495.72858
+offset_bottom = 20.99992
+text = "Credits"
+
+[node name="pbCredits" type="ProgressBar" parent="barBottom2/Elements" unique_id=1976470580]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 3.9999182
+offset_right = 826.0
+offset_bottom = 19.710918
+value = 80.87
+show_percentage = false
+
+[node name="lblTotal" type="Label" parent="barBottom2/Elements" unique_id=1892580862]
+layout_mode = 0
+offset_left = 828.58984
+offset_top = 2.9998555
+offset_right = 872.58984
+offset_bottom = 25.999855
+text = "Total:"
+
+[node name="lblTotalActual" type="Label" parent="barBottom2/Elements" unique_id=550516536]
+layout_mode = 0
+offset_left = 971.58984
+offset_top = 5.9998035
+offset_right = 1012.2075
+offset_bottom = 28.999804
+text = "cr"
+horizontal_alignment = 2
+
+[node name="barTop" type="Panel" parent="." unique_id=1564308]
+layout_mode = 0
+offset_right = 1023.0
+offset_bottom = 21.0
+theme = ExtResource("1_kr41b")
+
+[node name="lblSong" type="Label" parent="barTop" unique_id=1884195613]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 17.0
+text = "Song: "
+label_settings = ExtResource("2_imjlj")
+
+[node name="btnNextSong" type="Button" parent="barTop" unique_id=1446782488]
+layout_mode = 0
+offset_left = 275.0
+offset_top = -2.0
+offset_right = 398.0
+offset_bottom = 21.0
+text = "Play Next Song"
+
+[node name="btnPauseGame" type="Button" parent="barTop" unique_id=1702461777]
+layout_mode = 0
+offset_left = 558.0
+offset_top = 2.0
+offset_right = 639.0
+offset_bottom = 21.0
+text = "Pause Game"
+
+[node name="barHot" type="Panel" parent="." unique_id=265703073]
+layout_mode = 0
+offset_top = 707.0
+offset_right = 1024.0
+offset_bottom = 745.0
+theme = ExtResource("2_b3qhj")
+
+[node name="Panel" type="Panel" parent="barHot" unique_id=1387193471]
+layout_mode = 1
+anchors_preset = -1
+offset_top = -20.0
+offset_right = 421.0
+offset_bottom = 38.0
+
+[node name="pnlActiveGun" type="Panel" parent="barHot/Panel" unique_id=634868224]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 13.0
+offset_right = 73.0
+offset_bottom = 53.0
+theme_override_styles/panel = ExtResource("4_50alv")
+
+[node name="pnlAmmo" type="Panel" parent="barHot/Panel" unique_id=1146343590]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 14.0
+offset_right = 154.0
+offset_bottom = 52.0
+theme_override_styles/panel = ExtResource("5_nh46x")
+
+[node name="pnlBullet" type="Panel" parent="barHot/Panel" unique_id=1225027838]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 13.0
+offset_right = 169.0
+offset_bottom = 53.0
+theme_override_styles/panel = ExtResource("6_5t668")
+
+[node name="pnlHealth" type="Panel" parent="barHot/Panel" unique_id=1224224651]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 13.0
+offset_right = 339.0
+offset_bottom = 46.0
+
+[node name="prgAbility" type="ProgressBar" parent="barHot/Panel" unique_id=20285729]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 48.0
+offset_right = 339.0
+offset_bottom = 53.0
+value = 95.0
+show_percentage = false
+
+[node name="Slots" type="Control" parent="barHot" unique_id=370429585]
+anchors_preset = 0
+offset_left = 558.0
+offset_top = -5.0
+offset_right = 1002.0
+offset_bottom = 38.0
+theme = ExtResource("3_xxteq")
+
+[node name="pnl0" type="Panel" parent="barHot/Slots" unique_id=829055920]
+layout_mode = 0
+offset_left = -130.0
+offset_top = -4.0
+offset_right = -54.0
+offset_bottom = 43.0
+theme = ExtResource("3_xxteq")
+
+[node name="pnl2" type="Panel" parent="barHot/Slots" unique_id=988015926]
+layout_mode = 0
+offset_left = -47.0
+offset_top = -4.0
+offset_right = 29.0
+offset_bottom = 43.0
+theme = ExtResource("3_xxteq")
+
+[node name="pnl3" type="Panel" parent="barHot/Slots" unique_id=812375473]
+layout_mode = 0
+offset_left = 36.0
+offset_top = -4.0
+offset_right = 112.0
+offset_bottom = 43.0
+theme = ExtResource("3_xxteq")
+
+[node name="pnl4" type="Panel" parent="barHot/Slots" unique_id=312034755]
+layout_mode = 0
+offset_left = 119.0
+offset_top = -4.0
+offset_right = 195.0
+offset_bottom = 43.0
+theme = ExtResource("3_xxteq")
+
+[node name="pnl5" type="Panel" parent="barHot/Slots" unique_id=316716034]
+layout_mode = 0
+offset_left = 202.0
+offset_top = -4.0
+offset_right = 278.0
+offset_bottom = 43.0
+theme = ExtResource("3_xxteq")
+
+[node name="pnl6" type="Panel" parent="barHot/Slots" unique_id=803814245]
+layout_mode = 0
+offset_left = 285.0
+offset_top = -4.0
+offset_right = 361.0
+offset_bottom = 43.0
+theme = ExtResource("3_xxteq")
+
+[node name="pnl7" type="Panel" parent="barHot/Slots" unique_id=548635069]
+layout_mode = 0
+offset_left = 368.0
+offset_top = -4.0
+offset_right = 444.0
+offset_bottom = 43.0
+theme = ExtResource("3_xxteq")

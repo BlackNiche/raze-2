@@ -17,6 +17,8 @@ config/icon="res://assets/icon.svg"
 
 [display]
 
+window/size/viewport_width=1024
+window/size/viewport_height=768
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -53,9 +55,16 @@ player_shoot={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="World"
+2d_physics/layer_2="Characters"
+2d_physics/layer_3="Objects"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
+2d/default_gravity_vector=Vector2(0, 1.779)
 
 [rendering]
 

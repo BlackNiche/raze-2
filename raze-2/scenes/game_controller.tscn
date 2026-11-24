@@ -14,8 +14,10 @@ script = ExtResource("1_vq0e2")
 [node name="Win-Screen" type="Control" parent="." unique_id=1870234598]
 visible = false
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 531.0
+offset_top = 415.0
+offset_right = 571.0
+offset_bottom = 455.0
 
 [node name="Button" type="Button" parent="Win-Screen" unique_id=1396188776]
 layout_mode = 0

@@ -1,0 +1,9 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://bil4miv7l4uqq"]
+
+[ext_resource type="Gradient" uid="uid://ginxyrkdnxys" path="res://assets/StyleBoxes/Button_Gradient.tres" id="1_da2sn"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_frn1g"]
+gradient = ExtResource("1_da2sn")
+
+[resource]
+texture = SubResource("GradientTexture2D_frn1g")

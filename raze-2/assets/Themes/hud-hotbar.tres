@@ -1,0 +1,21 @@
+[gd_resource type="Theme" format=3 uid="uid://cx5i2ei0j5vx4"]
+
+[ext_resource type="StyleBox" uid="uid://cr3aptmh1pgqk" path="res://assets/StyleBoxes/HUD/HUD-Hotbar-PBar-Background.tres" id="1_g50tp"]
+[ext_resource type="StyleBox" uid="uid://bbycv2ya33cen" path="res://assets/StyleBoxes/HUD/HUD-Hotbar-PBar-Fill.tres" id="2_ty5ch"]
+
+[sub_resource type="Gradient" id="Gradient_7fsxv"]
+offsets = PackedFloat32Array(0, 0.048309177, 1)
+colors = PackedColorArray(0.26666668, 0.26666668, 0.26666668, 1, 0.2901961, 0.2901961, 0.2901961, 1, 0.14117648, 0.14117648, 0.14117648, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hiqpy"]
+gradient = SubResource("Gradient_7fsxv")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nup64"]
+texture = SubResource("GradientTexture2D_hiqpy")
+
+[resource]
+Panel/styles/panel = SubResource("StyleBoxTexture_nup64")
+ProgressBar/styles/background = ExtResource("1_g50tp")
+ProgressBar/styles/fill = ExtResource("2_ty5ch")

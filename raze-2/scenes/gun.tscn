@@ -1,16 +1,17 @@
 [gd_scene format=3 uid="uid://b4fvt821287ub"]
 
 [ext_resource type="Script" uid="uid://1rt2dwtygdyf" path="res://scripts/gun.gd" id="1_og67c"]
-[ext_resource type="Texture2D" uid="uid://da7dx4wn6pfox" path="res://assets/White Cube.png" id="2_gp1hk"]
+[ext_resource type="Texture2D" uid="uid://daubwlbjff8g5" path="res://assets/Gun1.png" id="2_og67c"]
 
 [node name="Gun" type="Node2D" unique_id=762129782]
 script = ExtResource("1_og67c")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=53099242]
-position = Vector2(64, 0)
-scale = Vector2(0.24, 0.16)
-texture = ExtResource("2_gp1hk")
+position = Vector2(41, 0)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_og67c")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=2073809710]
-position = Vector2(76, 0)
+position = Vector2(56, -6)
 target_position = Vector2(500, 0)
+collision_mask = 2

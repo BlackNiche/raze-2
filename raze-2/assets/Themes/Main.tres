@@ -1,0 +1,10 @@
+[gd_resource type="Theme" format=3 uid="uid://c53hxox054te3"]
+
+[ext_resource type="StyleBox" uid="uid://bil4miv7l4uqq" path="res://assets/StyleBoxes/Button_Texture.tres" id="1_xkman"]
+[ext_resource type="StyleBox" uid="uid://cttpvcu3y4cew" path="res://assets/StyleBoxes/Button_Default.tres" id="2_ha1kk"]
+
+[resource]
+/colors/a = Color(0, 0, 0, 1)
+/styles/a = null
+Button/styles/hover = ExtResource("1_xkman")
+Button/styles/normal = ExtResource("2_ha1kk")

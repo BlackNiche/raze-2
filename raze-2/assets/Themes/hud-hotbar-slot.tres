@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://cogs4pj36nd2e"]
+
+[ext_resource type="StyleBox" uid="uid://bwovqqlimrjrr" path="res://assets/StyleBoxes/HUD/HUD-Hotbar-Slot.tres" id="1_653sa"]
+
+[resource]
+Panel/styles/panel = ExtResource("1_653sa")

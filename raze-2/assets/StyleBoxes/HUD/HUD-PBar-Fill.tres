@@ -1,0 +1,6 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://boma6m0biw8b7"]
+
+[ext_resource type="Texture2D" uid="uid://dogk1eaftqafx" path="res://assets/StyleBoxes/HUD/Pbar-Blue.tres" id="1_ibnj8"]
+
+[resource]
+texture = ExtResource("1_ibnj8")

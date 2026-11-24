@@ -1,16 +1,36 @@
 [gd_scene format=3 uid="uid://cdnmidfs13vm4"]
 
-[ext_resource type="Texture2D" uid="uid://bydlnqin6yrwn" path="res://assets/Enemy Cube.png" id="1_7p1mj"]
 [ext_resource type="Script" uid="uid://dcxf8w6uvu526" path="res://scripts/enemy.gd" id="1_md0e3"]
+[ext_resource type="PackedScene" uid="uid://b4fvt821287ub" path="res://scenes/gun.tscn" id="2_4ra3w"]
+[ext_resource type="Texture2D" uid="uid://cciok1wee2nmx" path="res://assets/EnemySprite.png" id="2_md0e3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nup64"]
-size = Vector2(100, 100)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ra3w"]
+radius = 11.611112
+height = 130.0
 
 [node name="EnemyBody2D" type="CharacterBody2D" unique_id=223801000]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_md0e3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=32606462]
-texture = ExtResource("1_7p1mj")
+position = Vector2(-8, 0)
+texture = ExtResource("2_md0e3")
+offset = Vector2(8, 0)
 
-[node name="EnemyCollider" type="CollisionShape2D" parent="." unique_id=1348320670]
-shape = SubResource("RectangleShape2D_nup64")
+[node name="EnemyCollider" type="CollisionShape2D" parent="." unique_id=953882972]
+position = Vector2(-8, 4)
+shape = SubResource("CapsuleShape2D_4ra3w")
+
+[node name="Gun" parent="." unique_id=762129782 instance=ExtResource("2_4ra3w")]
+position = Vector2(-13, -23)
+
+[node name="VisionArea" type="Area2D" parent="." unique_id=323738668]
+
+[node name="EnemyVision" type="CollisionPolygon2D" parent="VisionArea" unique_id=414199554]
+polygon = PackedVector2Array(0, -47, 0, 58, 983, 223, 983, -312)
+
+[node name="LineOfSight" type="RayCast2D" parent="." unique_id=1515665004]
+
+[connection signal="body_entered" from="VisionArea" to="." method="_on_vision_area_body_entered"]
+[connection signal="body_exited" from="VisionArea" to="." method="_on_vision_area_body_exited"]

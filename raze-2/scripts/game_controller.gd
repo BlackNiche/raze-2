@@ -1,6 +1,6 @@
 extends Control
 
-@export var player = Node2D
+@export var player : Node2D
 
 var enemy_count = 1
 
